@@ -84,3 +84,13 @@ p {
         grid-template-columns: repeat(1, 1fr);
     }
 }
+.proyecto {
+    text-align: center;
+}
+
+.texto-oculto {
+    display: none;
+    margin-top: 5px;
+    font-size: 13px;
+    color: #cccccc;
+}
