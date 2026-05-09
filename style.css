@@ -4,93 +4,186 @@
     padding: 0;
 }
 
+/* Fondo general */
 body {
-    background-color: #0a0a0a;
+    background: linear-gradient(135deg, #0a0a0a, #111111);
     color: #ffffff;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 
     display: flex;
     justify-content: center;
     align-items: center;
+
     min-height: 100vh;
+    padding: 40px 20px;
 }
 
+/* TARJETA PRINCIPAL */
 .tarjeta-perfil {
     background-color: #1a1a1a;
-    border: 2px solid #0070f3;
-    border-radius: 12px;
-    padding: 30px;
-    max-width: 500px;
-    width: 90%;
+
+    border-left: 3px solid #0070f3;
+    border-right: 3px solid #0070f3;
+
+    border-radius: 18px;
+
+    width: 95%;
+    max-width: 1100px;
+
+    padding: 60px;
+
     text-align: center;
 
-    box-shadow: 0 10px 30px rgba(0, 112, 243, 0.2);
+    box-shadow: 0 15px 40px rgba(0, 112, 243, 0.15);
 }
 
+/* TITULO */
 h1 {
     color: #0070f3;
-    font-size: 26px;
-    margin-bottom: 10px;
+    font-size: 52px;
+    margin-bottom: 15px;
 }
 
+/* SUBTITULO */
+.tarjeta-perfil > p {
+    font-size: 22px;
+    color: #cfcfcf;
+    margin-bottom: 50px;
+}
+
+/* SECCIONES */
+section {
+    margin-top: 60px;
+}
+
+/* TITULOS */
 h2 {
-    margin-top: 25px;
-    margin-bottom: 10px;
-    color: #ffffff;
+    font-size: 42px;
+    margin-bottom: 25px;
+    color: white;
 }
 
+/* PARRAFOS */
 p {
-    color: #aaaaaa;
-    line-height: 1.6;
-    font-size: 14px;
+    color: #bdbdbd;
+    line-height: 2;
+    font-size: 20px;
 }
 
+/* SOBRE MI */
+section p {
+    max-width: 900px;
+    margin: auto;
+}
+
+/* GALERIA */
 .galeria {
     display: grid;
+
     grid-template-columns: repeat(3, 1fr);
-    gap: 10px;
-    margin-top: 15px;
+
+    gap: 25px;
+
+    margin-top: 35px;
 }
 
+/* PROYECTOS */
+.proyecto {
+    background-color: #111111;
+
+    border-radius: 14px;
+
+    overflow: hidden;
+
+    transition: transform 0.3s ease;
+}
+
+.proyecto:hover {
+    transform: translateY(-8px);
+}
+
+/* IMAGENES */
 .galeria img {
     width: 100%;
-    border-radius: 8px;
+    height: 240px;
+
+    object-fit: cover;
+
     cursor: pointer;
 
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    transition: transform 0.3s ease,
+                box-shadow 0.3s ease;
 }
 
 .galeria img:hover {
-    transform: scale(1.08);
-    box-shadow: 0 5px 15px rgba(0,0,0,0.6);
+    transform: scale(1.03);
+
+    box-shadow: 0 10px 25px rgba(0,0,0,0.6);
 }
 
+/* TEXTO OCULTO */
+.texto-oculto {
+    display: none;
+
+    padding: 15px;
+
+    font-size: 16px;
+
+    color: #d0d0d0;
+}
+
+/* CONTACTO */
+section:last-of-type p {
+    font-size: 18px;
+}
+
+/* BOTON ESTADO */
 .estado-online {
     display: inline-block;
-    margin-top: 25px;
-    padding: 6px 15px;
 
-    background-color: #0070f3;
+    margin-top: 45px;
+
+    padding: 12px 25px;
+
+    background: linear-gradient(90deg, #0070f3, #0050b3);
+
     color: white;
 
-    border-radius: 20px;
-    font-size: 12px;
+    border-radius: 30px;
+
+    font-size: 14px;
+
     text-transform: uppercase;
+
     font-weight: bold;
+
+    letter-spacing: 1px;
 }
 
-@media (max-width: 600px) {
+/* RESPONSIVE */
+@media (max-width: 900px) {
+
+    .tarjeta-perfil {
+        padding: 35px;
+    }
+
+    h1 {
+        font-size: 40px;
+    }
+
+    h2 {
+        font-size: 32px;
+    }
+
+    p {
+        font-size: 17px;
+    }
+
     .galeria {
         grid-template-columns: repeat(1, 1fr);
     }
-}
-.proyecto {
-    text-align: center;
-}
 
-.texto-oculto {
-    display: none;
-    margin-top: 5px;
-    font-size: 13px;
-    color: #cccccc;
+    .galeria img {
+        height: 220px;
+    }
 }
